@@ -14,8 +14,14 @@ RUN bun install
 # Copy the rest of the project files
 COPY . .
 
+# Ensure the directory structure is as expected
+RUN ls -lR 
+
 # Build the application using Bun
 RUN bun build src/server.ts --outdir=./out --target=bun --minify
+
+# Ensure the build output is as expected
+RUN ls -lR ./out
 
 # Expose the port your app runs on
 EXPOSE 3001

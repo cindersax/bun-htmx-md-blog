@@ -8,8 +8,6 @@ tags: ["ai technology", "machine learning"]
 featuredImage: "/public/placeholder.webp"
 ---
 
-# Understanding Neural Networks: A Beginner's Guide
-
 Neural networks are a fundamental concept in machine learning and artificial intelligence. This guide introduces the basics of neural networks and their role in AI.
 
 ## What is a Neural Network?

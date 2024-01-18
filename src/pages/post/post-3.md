@@ -8,8 +8,6 @@ tags: ["ai history", "ai technology"]
 featuredImage: "/public/placeholder.webp"
 ---
 
-# Key Algorithms That Shaped AI
-
 Artificial Intelligence (AI) has evolved tremendously, and much of its progress is owed to several key algorithms. This post explores these algorithms that have significantly influenced the field of AI.
 
 ## Turing Machine and the Concept of Computation

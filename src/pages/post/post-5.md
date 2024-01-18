@@ -8,8 +8,6 @@ tags: ["ai applications", "ai ethics"]
 featuredImage: "/public/placeholder.webp"
 ---
 
-# AI in Healthcare: Revolutionizing Patient Care
-
 The integration of artificial intelligence (AI) in healthcare is revolutionizing the way patient care is delivered. This post delves into the various applications of AI in healthcare and the ethical considerations it brings.
 
 ## AI-Driven Diagnostics and Treatment

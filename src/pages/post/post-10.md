@@ -8,8 +8,6 @@ tags: ["ai ethics", "ai innovation"]
 featuredImage: "/public/placeholder.webp"
 ---
 
-# The Future of Work: AI and the Job Market
-
 Artificial Intelligence (AI) is rapidly transforming the job market and the nature of work as we know it. This post examines the impact of AI on the workforce and the evolving landscape of employment.
 
 ## AI's Impact on Jobs

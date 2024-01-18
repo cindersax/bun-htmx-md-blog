@@ -8,8 +8,6 @@ tags: ["ai applications", "ai innovation"]
 featuredImage: "/public/placeholder.webp"
 ---
 
-# How AI Is Changing the Way We Shop Online
-
 The online shopping experience is being transformed by artificial intelligence (AI), making it more personalized, efficient, and engaging. This post explores the various ways AI is revolutionizing e-commerce.
 
 ## Personalized Shopping Experiences

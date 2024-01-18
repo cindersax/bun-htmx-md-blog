@@ -24,9 +24,9 @@ FROM base AS release
 COPY package.json bun.lockb /temp/
 RUN cd /temp && bun install --frozen-lockfile --production
 COPY --from=dependencies /temp/node_modules ./node_modules
-# Copy built files
-COPY --from=build-stage /usr/src/app/out ./out
-COPY package.json .
+
+# Copy all project files including static assets
+COPY --from=build-stage /usr/src/app/ ./
 
 # Set a non-root user and expose the required port
 USER bun

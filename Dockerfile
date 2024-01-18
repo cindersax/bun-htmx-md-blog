@@ -1,29 +1,22 @@
-# Use the Bun base image
-FROM oven/bun
+# Use the official Bun Docker image as a parent image
+FROM thebun/bun:edge
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Copy package.json, bun.lockb, and other necessary project files
-COPY package.json bun.lockb ./
-COPY src ./src
-COPY public ./public
-COPY tailwind.config.js .
+# Copy the configuration files into the container
+COPY package.json .
 COPY tsconfig.json .
+COPY tailwind.config.js .
 
-# Install dependencies
+# Copy the rest of your application's source code
+COPY src/ ./src/
+
+# Install any needed packages specified in package.json
 RUN bun install
 
-COPY . .
-
-# Build the application using Bun (compiles TypeScript, includes Tailwind CSS processing)
+# Build the application using the Bun build script
 RUN bun build src/server.ts --outdir=./out --target=bun --minify
 
-# Expose the port your app runs on (ensure this matches your app's port)
-EXPOSE 3001
-
-# Change working directory to where the compiled JS files are located
-WORKDIR /app/out
-
-# Run the application (replace 'server.js' with the actual output JavaScript file name)
-CMD ["bun", "run", "server.js"]
+# Define the command to run the app
+CMD ["bun", "start", "./out/server.js"]

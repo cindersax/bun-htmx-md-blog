@@ -30,7 +30,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone [your-repository-link]
+   git clone https://github.com/cindersax/bun-htmx-md-blog
    ```
 2. **Navigate to the Project Directory**
    ```bash

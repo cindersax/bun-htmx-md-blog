@@ -1,15 +1,22 @@
-# Build stage
-FROM thebun/bun:latest AS builder
-WORKDIR /app
+# Use an official Node.js base image
+FROM node:latest
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and other relevant files
 COPY package.json .
 COPY tsconfig.json .
 COPY tailwind.config.js .
-COPY src/ ./src/
-RUN bun install
-RUN bun build src/server.ts --outdir=./out --target=bun --minify
 
-# Run stage
-FROM thebun/bun:latest
-WORKDIR /app
-COPY --from=builder /app/out ./out
-CMD ["bun", "start", "./out/server.js"]
+# Copy your source code
+COPY src/ ./src/
+
+# Install dependencies
+RUN npm install
+
+# Build the application
+RUN npm run build
+
+# Define the command to run the app
+CMD ["node", "path/to/your/app.js"]

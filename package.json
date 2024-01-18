@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "bun run --hot src/server.ts",
-    "build": "bun build src/server.ts --outdir=./out --target=bun --minify --watch"
+    "build": "bun build src/server.ts --outdir=./out --target=bun --minify"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
